@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Human / Otherwise — An Interactive Reading of Octavia Butler's Dawn</title>
+  <meta name="description" content="An interactive literary philosophy experience inspired by Octavia Butler's Dawn. Move through five ethical modules and discover how you read Butler's moral world." />
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Fonts (degrade gracefully to system serif/sans offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- generative atmosphere -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__base"></div>
+    <div class="bg__aurora"></div>
+    <div class="bg__membrane"></div>
+    <div class="bg__grid"></div>
+    <div class="bg__grain"></div>
+    <div class="bg__vignette"></div>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- top bar -->
+  <header class="topbar" id="topbar">
+    <button class="topbar__brand" id="brand" aria-label="Human / Otherwise — return to start">
+      <span class="topbar__mark" aria-hidden="true"></span>
+      <span class="topbar__name">Human / Otherwise</span>
+    </button>
+    <nav class="topbar__meta" id="topnav" aria-label="Experience progress">
+      <span class="topbar__step" id="stepLabel" hidden></span>
+      <button class="topbar__restart" id="restart" hidden>Restart</button>
+    </nav>
+    <div class="topbar__progressline" id="progressLine"></div>
+  </header>
+
+  <!-- stage -->
+  <main class="stage" id="app" aria-live="polite">
+    <noscript>
+      <p class="noscript">Human / Otherwise is an interactive experience that requires JavaScript.
+      Please enable it to move through the five ethical modules of Octavia Butler's <em>Dawn</em>.</p>
+    </noscript>
+  </main>
+
+  <!-- modal host -->
+  <div class="modal-root" id="modalRoot" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__wrap">
+      <div class="modal__panel" id="modalPanel" tabindex="-1"></div>
+    </div>
+  </div>
+
+  <!-- classic scripts (no ES modules) so the site runs directly from file:// -->
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
