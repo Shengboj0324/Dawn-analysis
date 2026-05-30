@@ -243,7 +243,6 @@
         '<div class="result__head">' +
           '<p class="eyebrow" style="justify-content:center">Synthesis</p>' +
           '<h1 class="result__heading">' + R.heading + '</h1>' +
-          '<p class="result__intro">' + R.intro + '</p>' +
         '</div>' +
         '<div class="profile stagger">' +
           '<div class="profile__rule" style="--i:0"><span class="kicker">Your Profile</span><span class="line"></span></div>' +
@@ -253,7 +252,6 @@
         '</div>' +
         '<div class="result__footer">' +
           '<p class="result__closing">' + R.footer.closing + '</p>' +
-          '<p class="result__footerbody">' + R.footer.paragraph + '</p>' +
           '<div class="cta-row result__actions">' +
             '<button class="btn btn--primary" data-restart>Restart Experience</button>' +
           '</div>' +
