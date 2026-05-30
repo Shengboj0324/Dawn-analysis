@@ -43,7 +43,7 @@
       var id = h.slice(7);
       return moduleById(id) ? "module-" + id : "landing";
     }
-    if (h === "intro" || h === "instructions" || h === "results" || h === "reflection") return h;
+    if (h === "intro" || h === "instructions" || h === "results") return h;
     return "landing";
   }
 
@@ -202,25 +202,6 @@
         '</button>';
     }).join("");
 
-    var sig = "";
-    if (mod.significance) {
-      var tag = mod.significance.authored
-        ? '<span class="sig__tag" title="Editorial note">Editorial expansion — review</span>'
-        : '';
-      sig = '' +
-        '<div class="sig" data-sig>' +
-          '<button class="sig__summary" aria-expanded="false" data-sig-toggle>' +
-            'Significance in Dawn ' + CHEVRON +
-          '</button>' +
-          '<div class="sig__panel" data-sig-panel>' +
-            '<div class="sig__inner">' + tag + paras(mod.significance.paragraphs) + '</div>' +
-          '</div>' +
-        '</div>';
-    }
-
-    var transition = mod.transition
-      ? '<p class="transition">' + mod.transition + '</p>' : '';
-
     var continueDisabled = selected ? "" : ' aria-disabled="true" disabled';
     var hint = selected ? "" : '<span class="hint" data-hint>Select a response to continue</span>';
 
@@ -237,8 +218,6 @@
           '<p class="module__qtext">' + mod.question + '</p>' +
         '</div>' +
         '<div class="choices" role="radiogroup" aria-label="' + mod.title + ' — choose one response">' + cards + '</div>' +
-        sig +
-        transition +
         '<div class="module__actions">' +
           '<button class="btn btn--ghost" data-go="' + prevView + '">Back</button>' +
           '<span class="spacer"></span>' +
@@ -259,11 +238,6 @@
       return '<p style="--i:' + (i + 3) + '">' + t + '</p>';
     }).join("");
 
-    var rows = p.breakdown.map(function (row) {
-      return '<div class="breakdown__row"><span class="breakdown__k">' + row[0] + '</span>' +
-             '<span class="breakdown__v">' + row[1] + '</span></div>';
-    }).join("");
-
     return '' +
       '<section class="view result" tabindex="-1">' +
         '<div class="result__head">' +
@@ -276,45 +250,13 @@
           '<h2 class="profile__title" style="--i:1">' + p.name + '</h2>' +
           '<p class="profile__identity" style="--i:2">' + p.identity + '</p>' +
           '<div class="profile__interp">' + interp + '</div>' +
-          '<div class="breakdown" style="--i:' + (p.interpretation.length + 3) + '">' +
-            '<p class="breakdown__title">Thematic Breakdown</p>' +
-            '<div class="breakdown__grid">' + rows + '</div>' +
-          '</div>' +
-          '<div class="reflectioncard" style="--i:' + (p.interpretation.length + 4) + '">' +
-            '<p class="reflectioncard__title">A Question to Sit With</p>' +
-            '<p class="reflectioncard__prompt">' + p.reflection + '</p>' +
-          '</div>' +
         '</div>' +
         '<div class="result__footer">' +
           '<p class="result__closing">' + R.footer.closing + '</p>' +
           '<p class="result__footerbody">' + R.footer.paragraph + '</p>' +
           '<div class="cta-row result__actions">' +
-            '<button class="btn btn--ghost" data-modal="dmap">View My Decision Map</button>' +
-            '<button class="btn btn--primary" data-go="reflection">Read the Reflection Page ' + ARROW + '</button>' +
-            '<button class="btn btn--ghost" data-restart>Restart Experience</button>' +
+            '<button class="btn btn--primary" data-restart>Restart Experience</button>' +
           '</div>' +
-        '</div>' +
-      '</section>';
-  }
-
-  function vReflection() {
-    var Rf = C.reflection;
-    var reviewBtn = answeredCount() > 0
-      ? '<button class="btn btn--ghost" data-modal="dmap">Review My Answers</button>' : '';
-    return '' +
-      '<section class="view page" tabindex="-1">' +
-        '<p class="eyebrow">Reflection</p>' +
-        '<h1 class="reading__title">' + Rf.heading + '</h1>' +
-        '<div class="reading__body dropcap">' + paras(Rf.body) + '</div>' +
-        '<div class="panel" style="margin-top:34px">' +
-          '<p class="breakdown__title">' + Rf.objectiveHeading + '</p>' +
-          '<p style="color:var(--text-2);margin:0">' + Rf.objective + '</p>' +
-        '</div>' +
-        '<div class="divider-actions">' +
-          '<button class="btn btn--ghost" data-restart>Restart Experience</button>' +
-          reviewBtn +
-          '<span class="spacer"></span>' +
-          '<button class="btn btn--primary" data-go="landing">Return Home ' + ARROW + '</button>' +
         '</div>' +
       '</section>';
   }
@@ -360,65 +302,6 @@
         '<button class="btn btn--ghost" data-close>Close</button>' +
       '</div>';
     openModal(html);
-  }
-
-  function modalDecisionMap() {
-    var res = computeResult(state.answers);
-    var rows = MODULES.map(function (mod) {
-      var a = state.answers[mod.id];
-      var choice = null;
-      for (var i = 0; i < mod.choices.length; i++) if (mod.choices[i].key === a) choice = mod.choices[i];
-      var tags = "";
-      if (a) {
-        tags = (C.scoring[mod.id][a] || []).map(function (k) {
-          return '<span class="dmap__tag">' + C.profiles[k].name + '</span>';
-        }).join("");
-      }
-      return '' +
-        '<div class="dmap__row">' +
-          '<span class="dmap__badge">' + (a || "—") + '</span>' +
-          '<div>' +
-            '<p class="dmap__mod">Module ' + pad2(mod.n) + ' · ' + mod.title + '</p>' +
-            '<p class="dmap__choice">' + (choice ? choice.text : "<em>Not yet answered</em>") + '</p>' +
-            (tags ? '<div class="dmap__tags">' + tags + '</div>' : '') +
-          '</div>' +
-        '</div>';
-    }).join("");
-
-    var maxScore = 1;
-    C.finalOrder.forEach(function (k) { if (res.scores[k] > maxScore) maxScore = res.scores[k]; });
-    var bars = C.finalOrder.map(function (k) {
-      var top = k === res.key;
-      var pct = Math.round((res.scores[k] / maxScore) * 100);
-      return '' +
-        '<div class="bar">' +
-          '<span class="bar__name' + (top ? ' is-top' : '') + '">' + C.profiles[k].name + '</span>' +
-          '<span class="bar__track"><span class="bar__fill' + (top ? ' is-top' : '') + '" data-pct="' + pct + '"></span></span>' +
-          '<span class="bar__num">' + res.scores[k] + '</span>' +
-        '</div>';
-    }).join("");
-
-    var html = '' +
-      '<div class="modal__head">' +
-        '<h2 class="modal__title">Your Decision Map</h2>' + closeIcon() +
-      '</div>' +
-      '<div class="modal__body">' +
-        '<div class="dmap">' + rows + '</div>' +
-        '<div class="dmap__scores">' +
-          '<p class="dmap__scoretitle">Profile Weighting</p>' + bars +
-        '</div>' +
-      '</div>';
-
-    openModal(html, function (panel) {
-      // animate bars after paint
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-          panel.querySelectorAll(".bar__fill").forEach(function (el) {
-            el.style.width = el.getAttribute("data-pct") + "%";
-          });
-        });
-      });
-    });
   }
 
   function modalRestartConfirm() {
@@ -469,7 +352,6 @@
     else if (view === "instructions") html = vInstructions();
     else if (view.indexOf("module-") === 0) html = vModule(moduleById(view.slice(7)));
     else if (view === "results") html = vResults();
-    else if (view === "reflection") html = vReflection();
     else { html = vLanding(); isHero = true; }
 
     app.className = "stage" + (isHero ? " is-hero" : "");
@@ -551,7 +433,6 @@
 
   function openNamedModal(name) {
     if (name === "about") modalAbout();
-    else if (name === "dmap") modalDecisionMap();
   }
 
   function selectChoice(moduleId, key) {

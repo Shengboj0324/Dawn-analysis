@@ -21,8 +21,8 @@ window.CONTENT = {
   landing: {
     title: ["Human", "Otherwise"],
     subtitle: "An interactive literary philosophy experience inspired by Octavia Butler’s <em>Dawn</em>.",
-    hook: "What would be preserved if personal survival required a total genetic transformation?",
-    body: "In <em>Dawn</em>, survival is not the ultimate goal of the problem. It is the beginning of a more sophisticated question: how is the human defined when an exterior power reshapes the body, the future, and the fundamentals of choice? This project invites you to move through five ethical modules drawn from the novel’s most central conflicts, and to discover your position on humanity, consent, survival, change, and judgment.",
+    hook: "What would be preserved if survival needs to be exchanged with genetic transformation?",
+    body: "In <em>Dawn</em>, survival is not the ultimate solution to the problem. It is the beginning of a more sophisticated question: how is human defined when our body, future and fundamental choices are reshaped by an exterior power. This project invites you to move through five ethical modules designed with the novel’s most central conflicts, and to discover your position on humanity, consent, survival, change and judgement.",
     primary: "Begin Experience",
     secondary: "Learn More"
   },
@@ -30,9 +30,9 @@ window.CONTENT = {
   intro: {
     heading: "Before You Begin",
     body: [
-      "Octavia Butler’s <em>Dawn</em> begins after humanity has nearly destroyed itself in a nuclear war. Lilith Iyapo wakes on a living ship of the Oankali, an alien species that has somehow preserved the surviving humans from extinction. Yet the Oankali do not simply save humanity — they study it, interfere with its evolution, and insist on a genetic “trade” that binds survival to genetic transformation.",
-      "The novel reaches beyond casual moral categories. The Oankali preserve life, yet they also manipulate reproduction, knowledge, and physical change. Humans resist them for autonomy and identity, but Butler exposes the self-destructive hierarchies that ruined humanity in the first place. The story therefore asks not only whether humanity can survive, but whether survival still counts as freedom when the rules are set by someone else.",
-      "As you move through these tensions, you will respond to questions shaped by the central conflicts and receive an interpretive profile based on your responses and analysis."
+      "Octavia Butler’s <em>Dawn</em> is based on the near total extinction of humanity after the genocidal nuclear war. Lilith Iyapo wakes up on a living ship of the Oankali, an alien species that has somehow preserved the surviving humans from extinction. However, the Oankali do not simply save humanity, they study it, interfere with its evolution, and forcefully carry out a genetic “trade”, in exchange for human survival.",
+      "The novel carries depth beyond casual moral formats. The Onakli preserves life, but they also manipulate reproduction, knowledge, and physical evolution. Humans fight for autonomy and identity, but Butler reveals the self-destructive hierarchies that ruined humanity in the first place. Given the preconditions, the story discusses whether survival is still considered freedom when the rules are set by someone else.",
+      "As you move through these tensions, you will respond to questions related to the central conflicts and receive an interpretive profile based on your responses and analysis."
     ],
     primary: "Continue",
     secondary: "Back"
@@ -41,8 +41,8 @@ window.CONTENT = {
   instructions: {
     heading: "Your Personal Experience",
     body: [
-      "You will move through five main modules: Humanity, Consent, Survival, Change, and Judgement. Each module is dedicated to a single question drawn from the novel’s major tensions — from the uncertainty of being human to the ethics of consent under unequal power. Your responses will generate an interpretive profile that reflects how you approach Butler’s ideas.",
-      "There are no perfect answers in <em>Dawn</em>; it is built from controversy and conflicting ideologies. The goal of this project is not to arrive at certainty, but to make interpretation visible — to show how different values produce different understandings of the same novel."
+      "You will move through five main modules: Humanity, Consent, Survival, Change, and Judgement. Each module is dedicated to a single question based on novel’s moral concepts. Your responses will generate a profile that reveals your approach to Butler’s ideas.",
+      "There are no perfect answers in <em>Dawn</em>; it is built from controversy and conflicting ideologies. The goal of this project to visualize your understanding — to show how different values produce different learnings of the same novel."
     ],
     steps: [
       "Read each prompt carefully.",
@@ -59,18 +59,18 @@ window.CONTENT = {
       id: "humanity",
       n: 1,
       title: "Humanity",
-      tagline: "What defines the human when biology, memory, and choice no longer stay the same?",
+      tagline: "What defines the human when biology, memory, and choice are mutated?",
       setup: [
-        "In <em>Dawn</em>, the human is not a simple biological label. The Oankali preserve humanity from extinction, but they also reshape the fundamental terms of human existence through genetic trade, bodily intervention, and control over reproduction. This complex mixture turns humanity into an unstable category — something rooted not only in the body, but in memory, agency, selfhood, and the fear of becoming something unfamiliar.",
-        "Humans in the novel often cling to the idea of purity, as if remaining fully human means remaining unchanged. Yet Butler shows that change can feel like an ethical violation and still be inseparable from survival. This module asks you to decide where humanity truly belongs: in biological continuity, in conscious identity, in moral freedom, or somewhere more uncertain."
+        "In <em>Dawn</em>, humans are beyond a biological concept. The Oankali preserve humanity from extinction, but they also redefine the fundamental conditions of human existence through genetic trade, bodily transformation and control over reproduction. This complex combination provides an unclear category, something based on memory, self-agency and the fear of becoming something unfamiliar.",
+        "Humans in the novel often long to the idea of purity, believing that remaining fully human means remaining unchanged. This module asks you to decide where humanity truly belongs: in biological continuity, in conscious autonomy, in moral freedom or somewhere more uncertain."
       ],
-      question: "If a person’s body is radically altered by an alien power, but their memories, emotions, and self-awareness remain, are they still fully human?",
+      question: "If a person’s body is fundamentally changed by an alien power, but their memories, emotions, and self-awareness remain, are they still fully human?",
       choices: [
         { key: "A", text: "Yes. Humanity survives through consciousness, memory, and moral awareness — not through unchanged biology alone." },
         { key: "B", text: "No. Once the body is fundamentally altered, something essential to human identity is broken, even if the mind remains." },
         { key: "C", text: "Partly. The person remains human in experience and memory, but their humanity becomes deeply debatable because body and identity no longer fully match." },
         { key: "D", text: "It depends on consent. A transformation chosen freely may preserve humanity differently than one that is forced." },
-        { key: "E", text: "The question itself is too narrow. <em>Dawn</em> suggests that the human was never a fixed category — transformation is an instability, not a creation." }
+        { key: "E", text: "The question itself is too narrow. <em>Dawn</em> shows that human was never a fixed category, transformation is an instability, not a creation." }
       ],
       significance: {
         authored: true,
@@ -89,16 +89,16 @@ window.CONTENT = {
       title: "Consent",
       tagline: "Are agreements meaningful when one side controls the conditions of life?",
       setup: [
-        "In <em>Dawn</em>, consent is extremely unstable. The Oankali preserve human life, heal disease, and position themselves as benevolent caretakers — yet they also control awakening, movement, knowledge, reproduction, and physical change. Humans are not dealing with equals; they depend on a species that has already set the path of their future. That makes “choice” deeply ironic.",
-        "The novel therefore questions whether consent can truly exist when refusal brings overwhelming consequences, when the body has already been altered without permission, and when one side holds nearly all the power. Butler shows that care can coexist with violation, and that survival may be offered in terms that conflict with freedom."
+        "In <em>Dawn</em>, consent is extremely objective. Despite the rescuing, Oankali also controls awakening, movement, knowledge, reproduction, and physical change. Humans are not dealing with equals, they depend on a species that has already designed their future for them. This makes “choice” quite ironic.",
+        "Therefore, the question becomes whether consent can really exist if there is no otherwise. Butler shows that care can coexist with violence and that survival may coexist under conflicting terms with freedom."
       ],
-      question: "If accepting an offer is the only realistic way to survive, but the offer comes from a power that has already altered your body and your future without permission, does your agreement count as real consent?",
+      question: "If accepting an offer is the only way to survive, but with heavy cost, does the agreement count as real consent?",
       choices: [
         { key: "A", text: "Yes. Even under pressure, choosing survival is still a meaningful form of consent — a difficult choice is still a choice." },
         { key: "B", text: "No. Once one side controls the body, the terms, and the consequences of refusal, consent is coercion in a softer form." },
         { key: "C", text: "Partly. The agreement is practical, but it is morally compromised because the person is choosing within preset conditions they did not determine." },
         { key: "D", text: "Consent depends on transparency. If the controlling power fully reveals the risks, limits, and consequences, agreement can still be morally acceptable." },
-        { key: "E", text: "The problem is beyond yes or no. <em>Dawn</em> suggests consent is not a single moment of agreement, but a structure of power — and in unequal structures, it is always unstable." }
+        { key: "E", text: "The problem is beyond yes or no. <em>Dawn</em> shows that consent is not a single moment of agreement, but a structure of power, and in unequal structures, it is always unstable." }
       ],
       significance: {
         authored: false,
@@ -117,16 +117,16 @@ window.CONTENT = {
       title: "Survival",
       tagline: "What is the value of life when freedom no longer belongs entirely to you?",
       setup: [
-        "In <em>Dawn</em>, survival is extraordinarily complicated. The Oankali save humanity from extinction, but they do so by controlling the terms under which humans will continue to exist. Life is preserved, to a degree, yet autonomy is reduced, futures are redirected, and existence is no longer self-determined. Butler turns survival into an ethical question rather than a clear choice.",
-        "The novel therefore raises a difficult problem: is staying alive always worth the cost? Humans in <em>Dawn</em> must decide whether survival without full freedom is still meaningful, or whether life loses something essential when dignity, agency, and self-direction are no longer secure. This module asks you to decide what survival is worth when it arrives through dependence and control."
+        "In <em>Dawn</em>, survival is extraordinarily sophisticated. Life is preserved, to a degree, but autonomy is reduced, futures are redirected and existence is no longer self-determined. ",
+        "Therefore, the novel raises a complex problem: is staying alive always worth the cost? Humans need to decide if survival without full freedom is still meaningful, or if dignity, agency and self direction are more essential."
       ],
-      question: "Would you accept guaranteed survival if it meant surrendering lasting control over your body, your future, and the future of your species?",
+      question: "Would you accept guaranteed survival if it needs to be traded with control over your body, your future, and the future of your species?",
       choices: [
         { key: "A", text: "Yes. Survival must come first, because no freedom, identity, or future is possible if life itself ends." },
         { key: "B", text: "No. A life preserved through domination is too high a cost — survival without autonomy is a diminished form of existence." },
         { key: "C", text: "Only temporarily. Survival is acceptable at first, but only if autonomy can be reclaimed or renegotiated later." },
         { key: "D", text: "Only with clear limits. Survival may justify compromise, but not unlimited control over the body, reproduction, or long-term identity." },
-        { key: "E", text: "The two cannot be fully separated. <em>Dawn</em> suggests survival and loss are already entangled, and the real issue is how much compromise a future can bear." }
+        { key: "E", text: "The two cannot be fully separated. <em>Dawn</em> shows that survival and loss are already entangled, and the real issue is how much compromise that could cause to the future." }
       ],
       significance: {
         authored: false,
@@ -145,16 +145,16 @@ window.CONTENT = {
       title: "Change",
       tagline: "When identity begins to transform, is that survival, loss, or the beginning of something else?",
       setup: [
-        "In <em>Dawn</em>, change is not optional. The Oankali do not merely preserve human life; they insist on transformation through genetic trade, hybrid reproduction, and a redefinition of what humanity will become. For many humans, this feels like contamination or erasure. For the Oankali, it is adaptation, growth, and the only future worth having.",
-        "The novel therefore turns change into one of its most complicated moral problems. To remain unchanged may feel like dignity, continuity, and resistance — but it may also mean extinction, or the extension of a destructive idea of purity. Transformation may enrich the future while dismantling its old definitions. This module asks you to decide what change means when it enters the body, identity, and the future all at once."
+        "In <em>Dawn</em>, transformation is the mainframe of the genetic trade proposed by Onakali. For many humans, this feels like contamination or erasure. For the Oankali, it is adaptation, growth and the continuation of their species.",
+        "Therefore, to remain unchanged may feel like dignity, continuity and resistance, but it may also result in extinction. Transformation may enrich the future while dismantling its old terms. "
       ],
-      question: "If radical transformation offered the highest chance of survival and a viable future, but required giving up the idea of a pure, unchanged human identity, would you accept it?",
+      question: "If transformation offered the highest chance of survival and a viable future, but needs to be traded with human identity, would you accept it?",
       choices: [
         { key: "A", text: "Yes. Survival and growth require adaptation, and identity should not be defended so forcefully that it destroys the future." },
         { key: "B", text: "No. Some changes are too expensive — a future built on the loss of essential human continuity is not truly a human future." },
         { key: "C", text: "Only if the transformation stays limited. Adaptation might be necessary, but it should not erase the core of human identity." },
         { key: "D", text: "Only if the change is freely chosen. Transformation may be acceptable, but once it is imposed it becomes violation rather than growth." },
-        { key: "E", text: "The question has no clean answer. <em>Dawn</em> suggests change is both creation and loss, and the future is shaped by that tension — not by victory on either side." }
+        { key: "E", text: "The question has no clean answer. <em>Dawn</em> shows that change is both creation and loss, and the future is shaped by that tension, not by victory on either side." }
       ],
       significance: {
         authored: false,
@@ -173,16 +173,16 @@ window.CONTENT = {
       title: "Judgement",
       tagline: "How should power be judged when it saves a people by taking command of their future?",
       setup: [
-        "In <em>Dawn</em>, the Oankali are not easy to define. They rescue humanity from self-inflicted extinction, heal human bodies, and offer the possibility of life continuing. At the same time, they act without equal permission, control awakening and access to knowledge, intervene in reproduction, and insist on a future humans did not choose for themselves.",
-        "This is what makes judgement so contested in the novel. If the Oankali had only destroyed, condemning them would be easy. If they had only preserved without control, gratitude would be easy. But Butler builds a moral structure in which rescue and domination are inseparable. The final issue is therefore not whether the Oankali help or harm in a simple sense, but how to judge a power that preserves life while claiming authority over what that life will become."
+        "There are no clear definition of the Oankali. They rescue and manipulate humans, creating a conflicting impression for humans.",
+        "If the Oankali had only been destroyed and taken, it would be easy to condemn. If they had only preserved without control, there would be gratitude. However, in this condition, rescue and domination are inseparable. Some people argue that domination is the price people pay for continuation, however, the problem does not rest on simple senses, good or bad."
       ],
-      question: "How should the Oankali ultimately be understood, based on everything they do to humanity?",
+      question: "Ultimately, How should the Oankali be judged, based on everything they do to humanity?",
       choices: [
         { key: "A", text: "As rescuers. Their control is ethically troubling, but without them humanity would have died — and preservation carries the greatest moral weight." },
         { key: "B", text: "As colonizers. Their aid does not erase the fact that they impose transformation, seize authority, and redefine humanity without consent." },
         { key: "C", text: "As both rescuers and colonizers at once. Their preservation of life is real, but inseparable from domination — which makes their role morally divided." },
         { key: "D", text: "As a force that exposes human weakness rather than simply ruling over it. They are dangerous, but Butler also uses them to reveal the hierarchies and self-destructive patterns within humans." },
-        { key: "E", text: "As something beyond ordinary moral labels. <em>Dawn</em> suggests the Oankali cannot be judged through simple categories, because the novel is designed to leave rescue, violation, dependence, and transformation permanently entangled." }
+        { key: "E", text: "As something other than ordinary moral labels. The novel is designed to showcase the combination of different moral crisis and their trace left on human beings." }
       ],
       significance: null,
       transition: "You have reached the end of the decision path. Your responses now form an interpretive profile showing how you read Butler’s moral world.",
@@ -207,8 +207,8 @@ window.CONTENT = {
       name: "Ethical Resister",
       identity: "You believe that survival loses moral legitimacy when it is built on domination, coerced change, and compromised autonomy.",
       interpretation: [
-        "Your choices suggest that you read <em>Dawn</em> primarily as a warning. For you, Butler’s world is not defined first by rescue, but by the danger of power that presents itself as necessary, benevolent, and unavoidable. You are deeply skeptical of any future purchased through bodily control, unequal consent, or imposed transformation. Even when the alternative is extinction, you do not treat survival as an automatic justification. You read the novel as insisting that autonomy, dignity, and the right to self-determination are not secondary values — they are part of what makes life fully human in the first place.",
-        "This means you are likely to see the Oankali less as saviors than as a more sophisticated form of domination. Their care does not erase their control, and their preservation of humanity does not excuse their seizure of its future. Your reading strikes at one of Butler’s harshest questions: whether a life preserved by another power can still belong to the people living it."
+        "For you, Butler’s world is defined by the danger of power that presents itself as necessary, benevolent and unavoidable. You are deeply skeptical with any future traded with bodily control, unequal consent and forced transformation. Survival does not serve as a justification even when threatened with extinction. Autonomy, dignity and the right to self determination are not secondary values, they are part of what makes life fully human in the very first place.",
+        "This means you are likely to see the Oankali more as a form of domination. Your reading means that you tend to believe that a life preserved by another power does not belong to the people living it anymore."
       ],
       breakdown: [
         ["Humanity", "rooted in continuity, dignity, and moral agency"],
@@ -222,11 +222,11 @@ window.CONTENT = {
     PS: {
       key: "PS",
       letter: "B",
-      name: "Pragmatic Survivor",
-      identity: "You believe that existence must come before purity, and that difficult compromise may be morally painful but still necessary.",
+      name: "Survivor",
+      identity: "You believe that existence must come before purity, and that difficult compromise may be necessary.",
       interpretation: [
-        "Your choices suggest that you read <em>Dawn</em> through the logic of survival under pressure. For you, Butler’s novel does not offer ideal options; it offers damaged ones. In that world, extinction is the absolute loss, and compromise — however troubling — may still be the only path left open. You do not necessarily celebrate the Oankali’s methods, but you treat survival as the condition that makes all further freedom, negotiation, or future meaning possible. From your perspective, the novel’s ethical force lies in its refusal to grant humanity the comfort of clean resistance.",
-        "This means you are likely to judge the Oankali in hard practical terms. They preserve life where humans could not preserve themselves. Their control may be disturbing, but total refusal may amount to choosing annihilation over an imperfect future. Your reading therefore emphasizes necessity, endurance, and the tragic realism of Butler’s world: survival does not come clean, but it still comes."
+        "For you, Butler’s novel has no ideal options. Extinction is the absolute loss, and compromise. You prioritize survival higher than any other moral conditions such as freedom, negotiation, or future meaning possible. From your perspective, the ethical problem is that humans cannot have a direct resistance.",
+        "This means you are likely to understand Oankali in a very practical term. They preserve the continuation of humanity that humans could preserve on their own, their control may be disturbing, but refusal would mean complete loss. Therefore, you prioritize necessity, endurance and the tragic reality of contaminated identity."
       ],
       breakdown: [
         ["Humanity", "resilient even under altered conditions"],
@@ -240,11 +240,11 @@ window.CONTENT = {
     HE: {
       key: "HE",
       letter: "C",
-      name: "Human Essentialist",
-      identity: "You believe that humanity has real boundaries, and that crossing them too far risks destroying the very thing the novel claims to preserve.",
+      name: "Preservationist",
+      identity: "You believe that humanity has boundaries, and that crossing them too far risks destroying the novel aspects to preserve.",
       interpretation: [
-        "Your choices suggest that you read <em>Dawn</em> as a novel about the fragility of human continuity. For you, identity is not infinitely flexible — it depends on limits: bodily, cultural, historical, and perhaps even species-level. Change may be unavoidable, but not every change can be accepted without loss. You are alert to Butler’s emphasis on transformation, yet you resist the idea that transformation is automatically growth. In your reading, the fear of losing one’s humanity is not merely reactionary. It is a serious moral fear, because some futures may continue life while breaking the continuity that made that life recognizably human.",
-        "This means you are likely to treat the Oankali’s genetic trade with deep suspicion. They do not merely help humanity survive; they redefine what humanity will be, and they do so on terms humans did not control. Your reading preserves one of the novel’s most painful tensions: whether survival still counts as survival when what continues forward is no longer clearly the same people, species, or identity."
+        "The way you responded suggests you read Dawn as a story that illustrates how fragile human continuity is. For you, identity is not always adaptable. It is based on limits—of the body, of culture, of history, maybe even of being a particular species. Change might be impossible to avoid, but that doesn't mean every change comes free; some changes cost us something real. You focus on Butler's details on transformation, but you don't believe that transforming is the same as growing.",
+        "That's why you probably view the Oankali's genetic trade with suspicion. They don't just help humanity survive, they redefine what humanity is going to become, and they set the terms."
       ],
       breakdown: [
         ["Humanity", "grounded in continuity and recognizable limits"],
@@ -258,11 +258,11 @@ window.CONTENT = {
     TT: {
       key: "TT",
       letter: "D",
-      name: "Transformational Thinker",
-      identity: "You believe that fixed definitions of humanity are unstable, and that change — however unsettling — may be part of what survival truly requires.",
+      name: "The Adapter",
+      identity: "You believe that fixed definitions of humanity is wrong, and that change may be part of what survival requires.",
       interpretation: [
-        "Your choices suggest that you read <em>Dawn</em> as a challenge to purity, rigidity, and the fantasy of unchanged identity. For you, Butler is not simply mourning the loss of old humanity; she is exposing how fragile and perhaps artificial its supposed boundaries always were. You are more open than most to the idea that identity can survive transformation, and that the future may require mixture rather than preservation. In your reading, change is not automatically violation. It can also be adaptation, growth, and an honest confrontation with the fact that no living thing remains entirely pure or unchanged.",
-        "This means you are likely to see the Oankali as more than conquerors. Their presence may still be ethically troubling, but you read Butler as using them to unsettle human exceptionalism and to question whether resistance to change is always noble. Your interpretation is forward-facing: it treats the novel not only as a story about loss, but as a demand to imagine forms of life beyond the limits humans try to guard."
+        "The way you responded shows that you read Dawn as opposed to purity and rigidity. Butler is exposing how fragile, and maybe how artificial, the human identities are. You are most likely to believe that identity can survive being transformed, and that the future is better with identity combination rather than preserving. ",
+        "That's why you probably see the Oankali as more than just conquerors. You consider the novel as using them to unsettle human exceptionalism."
       ],
       breakdown: [
         ["Humanity", "flexible, unstable, and not reducible to biology alone"],
@@ -276,11 +276,11 @@ window.CONTENT = {
     AM: {
       key: "AM",
       letter: "E",
-      name: "Ambivalent Mediator",
+      name: "Balanced Reader",
       identity: "You resist clean moral conclusions and read <em>Dawn</em> as a novel built on tension, compromise, and unresolved ethical instability.",
       interpretation: [
-        "Your choices suggest that you see Butler’s novel at its most difficult and most honest: as a world where no side remains pure, no answer remains comfortable, and no judgment remains complete. You do not separate rescue from violation, survival from loss, or care from control. Instead, you read <em>Dawn</em> as a novel that forces incompatible truths to exist at once. The Oankali preserve life, but they also dominate. Humans defend autonomy, but they also carry the hierarchical impulses that helped destroy their own world. Lilith survives by mediating between sides, but that mediation itself becomes morally unstable.",
-        "This means your interpretation is the least interested in certainty and the most attentive to contradiction. You do not flatten Butler into a warning or a celebration. You read her as a writer of pressure, ambiguity, and tragic entanglement. In your reading, the achievement of <em>Dawn</em> is not that it answers what should happen next, but that it makes the reader feel how difficult it is to judge a future shaped by both necessity and violation."
+        "The way you responded suggests that you see Butler's novel as a world where no side stays untouched, and no complete judgement. You believe that the story intentionally leaves blank space for moral judgement. The Oankali preserve life, and they also dominate. Humans defend their autonomy, and they also carry the same hierarchical structures that destroyed their world at first. ",
+        "That's why your interpretation is highly based on contradiction. You cherish the entanglement among pressure, ambiguity, and tragic entanglement. "
       ],
       breakdown: [
         ["Humanity", "unstable and politically contested"],

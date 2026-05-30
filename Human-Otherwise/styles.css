@@ -8,31 +8,31 @@
  * 1. Design tokens
  * ----------------------------------------------------------------- */
 :root {
-  /* surfaces */
-  --bg-0: #07070b;
-  --bg-1: #0a0a10;
-  --bg-2: #0f0f18;
-  --surface: rgba(20, 20, 30, 0.55);
-  --surface-2: rgba(28, 28, 42, 0.62);
-  --surface-solid: #12121b;
+  /* surfaces — lifted for a brighter, airier scene while keeping the cold-violet identity */
+  --bg-0: #100e1c;
+  --bg-1: #15131f;
+  --bg-2: #1c1a2c;
+  --surface: rgba(40, 36, 60, 0.58);
+  --surface-2: rgba(54, 48, 78, 0.62);
+  --surface-solid: #1f1c2e;
 
   /* lines */
-  --line: rgba(156, 140, 255, 0.12);
-  --line-strong: rgba(166, 152, 255, 0.26);
+  --line: rgba(180, 168, 255, 0.18);
+  --line-strong: rgba(196, 184, 255, 0.34);
 
-  /* text */
-  --text: #ecebf5;
-  --text-2: #b5b2c8;
-  --text-3: #807d94;
-  --text-faint: #5c596d;
+  /* text — every level pushed brighter for readability */
+  --text: #f6f4fc;
+  --text-2: #d6d2e6;
+  --text-3: #a8a3c0;
+  --text-faint: #847e9a;
 
   /* cold-violet accent (used deliberately and rarely) */
-  --accent: #9c8cff;
-  --accent-bright: #bcb1ff;
-  --accent-deep: #5b50ad;
-  --accent-ink: #29234d;
-  --accent-glow: rgba(140, 124, 255, 0.50);
-  --accent-glow-soft: rgba(140, 124, 255, 0.16);
+  --accent: #a596ff;
+  --accent-bright: #d0c7ff;
+  --accent-deep: #6a5fc4;
+  --accent-ink: #2d2658;
+  --accent-glow: rgba(160, 144, 255, 0.55);
+  --accent-glow-soft: rgba(160, 144, 255, 0.20);
 
   /* type */
   --serif: "Fraunces", "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
@@ -109,8 +109,8 @@ button { font-family: inherit; }
 .bg__base {
   position: absolute; inset: 0;
   background:
-    radial-gradient(120% 80% at 50% -10%, #14122a 0%, rgba(13, 12, 24, 0) 55%),
-    radial-gradient(100% 70% at 85% 110%, #0d1622 0%, rgba(10, 10, 16, 0) 50%),
+    radial-gradient(120% 80% at 50% -10%, #261f4a 0%, rgba(30, 24, 56, 0) 55%),
+    radial-gradient(100% 70% at 85% 110%, #1a2540 0%, rgba(20, 22, 36, 0) 50%),
     linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
 }
 
@@ -118,11 +118,11 @@ button { font-family: inherit; }
 .bg__aurora {
   position: absolute; inset: -25%;
   background:
-    radial-gradient(38% 44% at 26% 30%, rgba(124, 104, 255, 0.22) 0%, rgba(124, 104, 255, 0) 60%),
-    radial-gradient(34% 40% at 78% 64%, rgba(86, 132, 220, 0.16) 0%, rgba(86, 132, 220, 0) 62%),
-    radial-gradient(30% 36% at 56% 18%, rgba(150, 110, 220, 0.14) 0%, rgba(150, 110, 220, 0) 60%);
+    radial-gradient(38% 44% at 26% 30%, rgba(150, 130, 255, 0.32) 0%, rgba(150, 130, 255, 0) 60%),
+    radial-gradient(34% 40% at 78% 64%, rgba(120, 160, 240, 0.24) 0%, rgba(120, 160, 240, 0) 62%),
+    radial-gradient(30% 36% at 56% 18%, rgba(180, 140, 240, 0.22) 0%, rgba(180, 140, 240, 0) 60%);
   filter: blur(24px);
-  opacity: 0.85;
+  opacity: 0.95;
   animation: aurora 38s ease-in-out infinite alternate;
 }
 
@@ -145,12 +145,12 @@ button { font-family: inherit; }
 .bg__grid {
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(160, 150, 220, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(160, 150, 220, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(190, 180, 240, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190, 180, 240, 0.07) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(120% 90% at 50% 30%, #000 0%, transparent 78%);
   -webkit-mask-image: radial-gradient(120% 90% at 50% 30%, #000 0%, transparent 78%);
-  opacity: 0.5;
+  opacity: 0.65;
 }
 
 /* film grain */
@@ -163,7 +163,7 @@ button { font-family: inherit; }
 
 .bg__vignette {
   position: absolute; inset: 0;
-  background: radial-gradient(120% 100% at 50% 40%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+  background: radial-gradient(120% 100% at 50% 40%, transparent 60%, rgba(0, 0, 0, 0.32) 100%);
 }
 
 /* cursor spotlight */
