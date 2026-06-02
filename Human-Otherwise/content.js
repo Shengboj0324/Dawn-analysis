@@ -204,7 +204,7 @@ window.CONTENT = {
     ER: {
       key: "ER",
       letter: "A",
-      name: "Ethical Resister",
+      name: "Resister",
       identity: "You believe that survival loses moral legitimacy when it is built on domination, coerced change, and compromised autonomy.",
       interpretation: [
         "For you, Butler’s world is defined by the danger of power that presents itself as necessary, benevolent and unavoidable. You are deeply skeptical with any future traded with bodily control, unequal consent and forced transformation. Survival does not serve as a justification even when threatened with extinction. Autonomy, dignity and the right to self determination are not secondary values, they are part of what makes life fully human in the very first place.",
